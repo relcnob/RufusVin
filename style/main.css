@@ -1,0 +1,51 @@
+/* MAIN CSS FILE */
+
+/* FONTS GO HERE */
+
+/* VARIABLES GO HERE */
+
+:root {
+  --colorMain: ;
+  --colorMainDark: ;
+  --colorSec: ;
+  --colorSecDark: ;
+  --colorLink: ;
+  --colorLinkDark: ;
+  --colorBg: ;
+  --colorText: ;
+  --fontHeader: ;
+  --fontBody: ;
+}
+
+/* STYLESHEET INIT - Mobile first */
+/* GLOBAL STYLING */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  font-family: var(--fontBody);
+  background: var(--colorBg);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
