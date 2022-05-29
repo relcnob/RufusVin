@@ -1,20 +1,22 @@
 /* MAIN CSS FILE */
 
 /* FONTS GO HERE */
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+/* font-family: 'Hind', sans-serif; */
 /* VARIABLES GO HERE */
 
 :root {
-  --colorMain: ;
-  --colorMainDark: ;
-  --colorSec: ;
-  --colorSecDark: ;
-  --colorLink: ;
-  --colorLinkDark: ;
-  --colorBg: ;
-  --colorText: ;
-  --fontHeader: ;
-  --fontBody: ;
+  --colorMain: #972230;
+  --colorMainDark: #4c0f19;
+  --colorMainDarker: #2b111b;
+  --colorLink: #972230;
+  --colorLinkDark: #4c0f19;
+  --colorBg: #f2f0ed;
+  --colorText: #050505;
+  --fontUI: "Montserrat", sans-serif;
+  --fontBody: "Hind", sans-serif;
 }
 
 /* STYLESHEET INIT - Mobile first */
