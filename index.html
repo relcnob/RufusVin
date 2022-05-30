@@ -15,7 +15,7 @@
   <body>
     <header>
       <section class="header-wrapper">
-        <a href="index.html"
+        <a href="index.html" class="header-logo"
           ><img src="assets/icons/RufusVin-logo-red.svg" alt="RufusVin logo"
         /></a>
         <div class="menu-toggle">
@@ -28,26 +28,38 @@
             <li><a href="#">WINE CLUB</a></li>
             <li><a href="#">NEWS</a></li>
           </ul>
-          <ul>
+          <ul class="header-menu-icons">
             <li>
-              <a href="#"><img src="assets/icons/" alt="search" /></a>
+              <a href="#" id="search-icon"
+                ><img src="assets/icons/" alt="search" /><span>SEARCH</span></a
+              >
             </li>
             <li>
-              <a href="#"><img src="assets/icons/" alt="account" /></a>
+              <a href="#" id="account-icon"
+                ><img src="assets/icons/" alt="account" /><span
+                  >ACCOUNT</span
+                ></a
+              >
             </li>
             <li>
-              <a href="#"><img src="assets/icons/" alt="favorites" /></a>
+              <a href="#" id="favorites-icon"
+                ><img src="assets/icons/" alt="favorites" /><span
+                  >FAVORITES</span
+                ></a
+              >
             </li>
             <li>
-              <a href="#"><img src="assets/icons/" alt="basket" /></a>
+              <a href="#" id="basket-icon"
+                ><img src="assets/icons/" alt="basket" /><span>BASKET</span></a
+              >
             </li>
           </ul>
         </nav>
         <section class="header-searchbar">
           <input type="text" placeholder="Type your search here" />
-          <img src="assets/img/icons/cross.svg" class="searchbar-close" />
+          <img src="assets/icons/close.svg" class="searchbar-close" />
         </section>
-        <section class="basket"></section>
+        <section class="header-basket"></section>
       </section>
     </header>
     <main></main>
@@ -56,5 +68,6 @@
         <section></section>
       </section>
     </footer>
+    <script src="scripts/menu.js"></script>
   </body>
 </html>
