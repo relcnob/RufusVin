@@ -29,36 +29,36 @@ function updateSlide() {
     slide1.className = "slide-1 pos-2";
     slide2.className = "slide-2 pos-3";
     slide3.className = "slide-3 pos-4";
+    slideSelector1.classList.add("selected-slide");
+    slideSelector2.classList.remove("selected-slide");
+    slideSelector3.classList.remove("selected-slide");
   } else if (activeSlide == 2) {
     slide1.className = "slide-1 pos-1";
     slide2.className = "slide-2 pos-2";
     slide3.className = "slide-3 pos-3";
+    slideSelector2.classList.add("selected-slide");
+    slideSelector1.classList.remove("selected-slide");
+    slideSelector3.classList.remove("selected-slide");
   } else if (activeSlide == 3) {
     slide1.className = "slide-1 pos-1";
     slide2.className = "slide-2 pos-1";
     slide3.className = "slide-3 pos-2";
+    slideSelector3.classList.add("selected-slide");
+    slideSelector2.classList.remove("selected-slide");
+    slideSelector1.classList.remove("selected-slide");
   }
 }
 
 slideSelector1.addEventListener("click", () => {
   activeSlide = 1;
   updateSlide();
-  slideSelector1.classList.add("selected-slide");
-  slideSelector2.classList.remove("selected-slide");
-  slideSelector3.classList.remove("selected-slide");
 });
 
 slideSelector2.addEventListener("click", () => {
   activeSlide = 2;
   updateSlide();
-  slideSelector2.classList.add("selected-slide");
-  slideSelector1.classList.remove("selected-slide");
-  slideSelector3.classList.remove("selected-slide");
 });
 slideSelector3.addEventListener("click", () => {
   activeSlide = 3;
   updateSlide();
-  slideSelector3.classList.add("selected-slide");
-  slideSelector2.classList.remove("selected-slide");
-  slideSelector1.classList.remove("selected-slide");
 });
