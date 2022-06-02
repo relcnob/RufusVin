@@ -70,17 +70,17 @@
 		<section class="product-list-info">
 			<h1>STORE</h1>
 			<div class="product-list-ui">
-				<span>Filters</span>
 				<select id="sort" name="sort">
-					<option value="default">Choose sorting</option>
-					<option value="A-Z">A-Z</option>
-					<option value="Z-A">Z-A</option>
-					<option value="Price ascending">Price ascending</option>
-					<option value="Price descending">Price descending</option>
+					<option value="default">Sorting</option>
+					<option value="A-Z">Sort A-Z</option>
+					<option value="Z-A">Sort Z-A</option>
+					<option value="Price ascending">Price low-to-high</option>
+					<option value="Price descending">Price high-to-low</option>
 				  </select>
+				  <span id="open-filters">Filters</span>
 			</div>
 		</section>
-		<section class="product-list-filters">
+		<section class="product-list-filters filters-collapsed">
 			<img src="assets/icons/ico-close.svg" class="filter-close" />
 			<form>
 			<section class="product-list-filter-wrapper">
@@ -497,5 +497,6 @@
       <div class="copyright">	&copy; 2022 Derail Department</div>
     </footer>
     <script src="scripts/menu.js"></script>
+	<script src="scripts/product-list-filters.js"></script>
   </body>
 </html>
