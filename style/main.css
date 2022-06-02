@@ -475,6 +475,34 @@ h1 {
   filter: brightness(1.4);
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--fontUI);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--colorMain);
+  transition: 0.5s ease-in-out;
+}
+
+.breadcrumbs a:hover {
+  filter: brightness(1.4);
+}
+
+.breadcrumbs a:after {
+  margin-left: 0.3rem;
+  content: "/";
+  display: inline-block block;
+  color: rgb(0, 0, 0);
+}
+
 /* homepage */
 
 .slider-wrapper {
@@ -982,7 +1010,7 @@ h1 {
   .footer-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem 4rem;
+    padding: var(--sectionPadding);
   }
 
   .footer-wrapper section {
