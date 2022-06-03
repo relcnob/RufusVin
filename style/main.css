@@ -863,8 +863,6 @@ h1 {
   filter: brightness(1.3);
 }
 
-/* About Us page styling */
-
 @media screen and (min-width: 768px) {
   :root {
     --sectionPadding: 2rem;
