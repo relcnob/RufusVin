@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-// const id = urlParams.get("id");
-const id = 56;
+const id = urlParams.get("id");
+
 const url = "https://mehmetscreations.dk/wp21a/wp-json/wp/v2/wine/" + id;
 let quantity = parseInt(document.querySelector("#quantity").value);
 

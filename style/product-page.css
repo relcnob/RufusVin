@@ -50,6 +50,7 @@
 .product-desc-wrapper h1 {
   font-size: 1.5rem;
   color: var(--colorMainDark);
+  max-width: 80%;
 }
 
 .product-header span {

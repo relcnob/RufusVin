@@ -21,8 +21,7 @@ function showProductList(product) {
   const myClone = template.cloneNode(true);
   //POPULATE TEMPLATE
 
-  myClone.querySelector(".product-card a").src =
-    "product-page.html?id=" + product.id;
+  myClone.querySelector(" a ").href = "product-page.html?id=" + product.id;
 
   myClone.querySelector(".pc-price").textContent = product.wineprice + " kr";
   myClone.querySelector(".pc-producer").textContent = product.wineproducer;
@@ -31,6 +30,26 @@ function showProductList(product) {
     product.wineregion + " " + product.winegrape;
   myClone.querySelector(".product-card img").src = product.winepic1.guid;
   myClone.querySelector(".product-card img").alt = product.winename;
+  // flag
+  myClone
+    .querySelector(".pc-ico-country")
+    .classList.add("pc-ico-flag-" + product.winecountry);
+  // points
+  myClone.querySelector(".pc-ico-rating").textContent = product.winerating;
+  // food
+  let foodPairings = product.winefoodpairing.split(",");
+  myClone
+    .querySelector(".pc-ico-food-1")
+    .classList.add("pc-ico-" + foodPairings[0]);
+  myClone
+    .querySelector(".pc-ico-food-2")
+    .classList.add("pc-ico-" + foodPairings[1]);
+  if (product.winenatural == 1) {
+    myClone.querySelector(".pc-ico-natural").classList.add("pc-ico-leaf");
+  }
+  wineType = product.winetype.toLowerCase();
+  myClone.querySelector(".pc-ico-type").classList.add("pc-ico-" + wineType);
+
   //  APPEND PRODUCT
   parent.appendChild(myClone);
 }
