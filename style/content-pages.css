@@ -1,5 +1,5 @@
-/* About Us page styling */
-.about-us-wrapper {
+/* Content pages styling */
+.content-pages-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -7,11 +7,11 @@
   margin: auto;
   padding: var(--sectionPadding);
 }
-.about-us-wrapper h1 {
+.content-pages-wrapper h1 {
   color: var(--colorMain);
 }
 
-.about-us-text-box {
+.content-pages-text-box {
   color: var(--colorText);
   width: 100%;
   padding: 1rem;
@@ -24,10 +24,10 @@
   padding: var(--sectionPadding);
   box-shadow: 0px 0px 10px hsl(247deg 5% 75%);
 }
-.about-us-text-box p {
+.content-pages-text-box p {
   text-align: left;
 }
-.about-us-image-wrapper {
+.content-pages-image-wrapper {
   display: flex;
   background: url(../assets/images/about-us-background.jpg);
   background-size: cover;
@@ -35,12 +35,17 @@
   background-position: center;
   padding: 7rem 0;
 }
+.wine-club-image-wrapper {
+  display: flex;
+  background: url(../assets/images/wine-club.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 7rem 0;
+}
 
 @media screen and (min-width: 1024px) {
-  :root {
-    --sectionPadding: 2rem;
-  }
-  .about-us-wrapper {
+  .content-pages-wrapper {
     grid-template-columns: 4fr 6fr;
   }
 }
