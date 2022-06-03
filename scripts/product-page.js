@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 // const id = urlParams.get("id");
 const id = 56;
 const url = "https://mehmetscreations.dk/wp21a/wp-json/wp/v2/wine/" + id;
+let quantity = parseInt(document.querySelector("#quantity").value);
 
 fetch(url)
   .then((res) => res.json())
@@ -97,3 +98,23 @@ function showProduct(product) {
   //   DOCUMENT TITLE
   document.title = "RufusVin - " + product.winename;
 }
+
+// counter
+// add amount
+document.querySelector(".atc-add").addEventListener("click", () => {
+  if (quantity > 5) {
+    quantity = 6;
+  } else {
+    quantity = quantity + 1;
+    document.querySelector("#quantity").value = quantity;
+  }
+});
+// remove amount
+document.querySelector(".atc-remove").addEventListener("click", () => {
+  if (quantity < 2) {
+    quantity = 1;
+  } else {
+    quantity = quantity - 1;
+    document.querySelector("#quantity").value = quantity;
+  }
+});
