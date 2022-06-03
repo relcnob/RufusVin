@@ -44,6 +44,32 @@
   padding: 7rem 0;
 }
 
+.contact-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-width: 1600px;
+  margin: auto;
+  padding: var(--sectionPadding);
+}
+.contact-page-wrapper h1 {
+  color: var(--colorMain);
+}
+
+.contact-page-text-box {
+  color: var(--colorText);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: var(--sectionPadding);
+  box-shadow: 0px 0px 10px hsl(247deg 5% 75%);
+}
+
 @media screen and (min-width: 1024px) {
   .content-pages-wrapper {
     grid-template-columns: 4fr 6fr;
