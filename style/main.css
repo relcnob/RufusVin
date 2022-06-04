@@ -499,7 +499,7 @@ h1 {
 .breadcrumbs a:after {
   margin-left: 0.3rem;
   content: "/";
-  display: inline-block block;
+  display: inline-block;
   color: rgb(0, 0, 0);
 }
 

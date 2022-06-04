@@ -1,18 +1,136 @@
 const url = "https://mehmetscreations.dk/wp21a/wp-json/wp/v2/wine?per_page=50";
 
+// fetch current URL and convert it to string
+// search for parameters
+const urlParams = new URLSearchParams(window.location.search);
+// create new URL element to fetch all parameters of a type
+urlFilters = new URL(window.location.href.toString());
+let filterWineType = urlFilters.searchParams.getAll("wine-type");
+let filterWineCountry = urlFilters.searchParams.getAll("wine-country");
+let filterWineRegion = urlFilters.searchParams.getAll("wine-region");
+let filterWineStyle = urlFilters.searchParams.getAll("wine-style");
+let filterWinePairing = urlFilters.searchParams.getAll("food-pairing");
+let filterMinPrice = urlFilters.searchParams.getAll("min-price");
+let filterMaxPrice = urlFilters.searchParams.getAll("max-price");
+let filterNatural = urlFilters.searchParams.getAll("natural-wine");
+console.log(filterWineType);
+console.log(filterWineCountry);
+console.log(filterWineRegion);
+console.log(filterWineStyle);
+console.log(filterWinePairing);
+console.log(filterMinPrice);
+console.log(filterMaxPrice);
+console.log(filterNatural);
+
 fetch(url)
   .then((res) => res.json())
   .then((data) => handleProductList(data));
 
 function handleProductList(data) {
-  //function needs different name from api.js to work
-  //console.log(data);
-  data.forEach(showProductList);
+  // CHECK FOR FILTERS AND DISPLAY PRODUCTS
+  let filteredProducts = data.filter(function (wine) {
+    // CONVERT FOOD PAIRINGS TO ARRAY
+    let splitFoodPairing = wine.winefoodpairing.split(",");
+    // check if filters are empty if yes update them with all options
+    if (filterWineType.length == 0) {
+      filterWineType = ["Red", "White", "Rose", "Sparkling"];
+    }
+    if (filterWineCountry.length == 0) {
+      filterWineCountry = [
+        "Italy",
+        "France",
+        "Germany",
+        "Belgium",
+        "Portugal",
+        "Spain",
+      ];
+    }
+    if (filterWineRegion.length == 0) {
+      filterWineRegion = [
+        "Rioja",
+        "Bordeaux",
+        "Tuscany",
+        "Rheingau",
+        "Nahe",
+        "Ruwer",
+        "Burgundy",
+        "Brezeme",
+        "Champagne",
+        "Chablis",
+        "Pfalz",
+        "Franconia",
+        "Lisbon",
+        "Porto",
+        "Antwerp",
+        "Wallonie",
+        "Bree",
+        "Sicily",
+        "Piemonte",
+        "Limburg",
+      ];
+    }
+    if (filterWineStyle.length == 0) {
+      filterWineStyle = [
+        "Rioja red",
+        "Rioja white",
+        "Bordeaux",
+        "Sangiovese",
+        "Riesling",
+        "German spätburgunder",
+        "Burgundy red",
+        "Burgundy white",
+        "Chablis white",
+        "Loire red",
+        "French syrah",
+        "Merlot",
+        "Champagne",
+        "Lisbon red",
+        "Lisbon white",
+        "Port wine",
+        "Belgian chardonnay",
+        "Sicilian red",
+        "Spumante",
+        "Italian barolo",
+        "Sparkling",
+        "Erbaluce white",
+        "Pet nat rosé",
+        "Pinot noir",
+      ];
+    }
+    if (filterWinePairing.length == 0) {
+      filterWinePairing = ["beef", "pork", "poultry", "fish"];
+    }
+
+    if (filterMinPrice.length == 0) {
+      filterMinPrice = 89;
+    }
+    if (filterMaxPrice.length == 0) {
+      filterMaxPrice = 3999;
+    }
+    if (filterWinePairing.length == 1) {
+      filterWinePairing[1] = filterWinePairing[0];
+    }
+    if (filterNatural.length == 0) {
+      filterNatural = ["0", "1"];
+    }
+
+    return (
+      filterWineType.includes(wine.winetype) &&
+      filterWineCountry.includes(wine.winecountry) &&
+      filterWineRegion.includes(wine.wineregion) &&
+      filterWineStyle.includes(wine.winestyle) &&
+      filterWinePairing.some((r) => splitFoodPairing.includes(r)) &&
+      parseInt(filterMinPrice) <= wine.wineprice &&
+      parseInt(filterMaxPrice) >= wine.wineprice &&
+      filterNatural.some((r) => wine.winenatural.includes(r))
+    );
+  });
+  filteredProducts.forEach(showProductList);
 }
+const parent = document.querySelector(".product-list-wrapper");
 
 function showProductList(product) {
-  const parent = document.querySelector(".product-list-wrapper");
-  console.log(product);
+  // console.log(product);
   //GRAB TEMPLATE
 
   const template = document.querySelector("#product-card-template").content;
@@ -54,6 +172,7 @@ function showProductList(product) {
   parent.appendChild(myClone);
 }
 
+document.querySelector("#sort").addEventListener("click", () => {});
 // PRODUCT CARD TEMPLATE
 
 // <article class="product-card">
