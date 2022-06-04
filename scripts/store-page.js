@@ -13,14 +13,14 @@ let filterWinePairing = urlFilters.searchParams.getAll("food-pairing");
 let filterMinPrice = urlFilters.searchParams.getAll("min-price");
 let filterMaxPrice = urlFilters.searchParams.getAll("max-price");
 let filterNatural = urlFilters.searchParams.getAll("natural-wine");
-console.log(filterWineType);
-console.log(filterWineCountry);
-console.log(filterWineRegion);
-console.log(filterWineStyle);
-console.log(filterWinePairing);
-console.log(filterMinPrice);
-console.log(filterMaxPrice);
-console.log(filterNatural);
+// console.log(filterWineType);
+// console.log(filterWineCountry);
+// console.log(filterWineRegion);
+// console.log(filterWineStyle);
+// console.log(filterWinePairing);
+// console.log(filterMinPrice);
+// console.log(filterMaxPrice);
+// console.log(filterNatural);
 
 fetch(url)
   .then((res) => res.json())
@@ -138,9 +138,7 @@ function showProductList(product) {
   //CLONE TEMPLATE
   const myClone = template.cloneNode(true);
   //POPULATE TEMPLATE
-
   myClone.querySelector(" a ").href = "product-page.html?id=" + product.id;
-
   myClone.querySelector(".pc-price").textContent = product.wineprice + " kr";
   myClone.querySelector(".pc-producer").textContent = product.wineproducer;
   myClone.querySelector(".pc-wine-name").textContent = product.winename;
@@ -172,6 +170,7 @@ function showProductList(product) {
   parent.appendChild(myClone);
 }
 
+// SORTING
 let sortingOption = document.querySelector("#sort");
 sortingOption.addEventListener("click", () => {
   console.log(sortingOption.value);
@@ -257,7 +256,6 @@ sortingOption.addEventListener("click", () => {
   }
 });
 
-document.querySelector("#sort").addEventListener("click", () => {});
 // PRODUCT CARD TEMPLATE
 
 // <article class="product-card">

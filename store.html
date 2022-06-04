@@ -363,13 +363,15 @@
 					  </div>
 					</section>
 			</section>
-			<section class="product-list-filter-wrapper">
+			<section class="product-list-filter-wrapper ">
 				<h3>Other</h3>
-				<section class="filter-list">
+				<section class="filter-list range-filters">
 					<input type="range" id="min-price" name="min-price"
-         min="89" max="3999" value="0">
+         min="89" max="3999" value="0" oninput="document.querySelector('#min-price-label').value = `Minimum price: ` +this.value + ` kr.`">
+		 <output id="min-price-label">Minimum price: 89 kr.</output>
 		 <input type="range" id="max-price" name="max-price"
-         min="89" max="3999" value="3999">
+         min="89" max="3999" value="3999" oninput="document.querySelector('#max-price-label').value = `Maximum price: ` +this.value + ` kr.`">
+		 <output id="max-price-label">Maximum price: 3999 kr.</output>
 					<div>
 						<input type="checkbox" id="natural-wine" name="natural-wine" value="1">
 						<label for="natural-wine">Natural</label>
@@ -381,10 +383,6 @@
 		</section>
 		<section class="product-list-wrapper">
 <!-- product cards here -->
-
-
-
-
 		</section>
 <template id="product-card-template">
 	<article class="product-card">
