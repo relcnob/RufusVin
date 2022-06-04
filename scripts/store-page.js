@@ -172,6 +172,91 @@ function showProductList(product) {
   parent.appendChild(myClone);
 }
 
+let sortingOption = document.querySelector("#sort");
+sortingOption.addEventListener("click", () => {
+  console.log(sortingOption.value);
+  if (sortingOption.value == "default") {
+  } else if (sortingOption.value == "price-asc") {
+    // PRICE ASCENDING
+    let productCards = parent.children;
+    let productCardsArray = [];
+    for (let i = 0; i < productCards.length; i++) {
+      productCardsArray.push(productCards[i]);
+    }
+    function sortByPrice(a, b) {
+      let price1text = a.querySelector(".pc-price").textContent;
+      let price2text = b.querySelector(".pc-price").textContent;
+      let price1 = parseInt(price1text);
+      let price2 = parseInt(price2text);
+      console.log(price1);
+      if (price1 == price2) return 0;
+      else if (price1 < price2) return -1;
+      else return 1;
+    }
+    productCardsArray.sort(sortByPrice);
+    for (let i = 0; i < productCardsArray.length; i++) {
+      parent.appendChild(productCardsArray[i]);
+    }
+  } else if (sortingOption.value == "price-desc") {
+    // PRICE DESCENDING
+    let productCards = parent.children;
+    let productCardsArray = [];
+    for (let i = 0; i < productCards.length; i++) {
+      productCardsArray.push(productCards[i]);
+    }
+    function sortByPrice(a, b) {
+      let price1text = a.querySelector(".pc-price").textContent;
+      let price2text = b.querySelector(".pc-price").textContent;
+      let price1 = parseInt(price1text);
+      let price2 = parseInt(price2text);
+      console.log(price1);
+      if (price1 == price2) return 0;
+      else if (price1 < price2) return 1;
+      else return -1;
+    }
+    productCardsArray.sort(sortByPrice);
+    for (let i = 0; i < productCardsArray.length; i++) {
+      parent.appendChild(productCardsArray[i]);
+    }
+  } else if (sortingOption.value == "alph-desc") {
+    // ALPHABETICALLY DESCENDING
+    let productCards = parent.children;
+    let productCardsArray = [];
+    for (let i = 0; i < productCards.length; i++) {
+      productCardsArray.push(productCards[i]);
+    }
+    function sortByPrice(a, b) {
+      let name1 = a.querySelector(".pc-wine-name").textContent;
+      let name2 = b.querySelector(".pc-wine-name").textContent;
+      if (name1 == name2) return 0;
+      else if (name1 < name2) return -1;
+      else return 1;
+    }
+    productCardsArray.sort(sortByPrice);
+    for (let i = 0; i < productCardsArray.length; i++) {
+      parent.appendChild(productCardsArray[i]);
+    }
+  } else {
+    // ALPHABETICALLY ASCENDING
+    let productCards = parent.children;
+    let productCardsArray = [];
+    for (let i = 0; i < productCards.length; i++) {
+      productCardsArray.push(productCards[i]);
+    }
+    function sortByPrice(a, b) {
+      let name1 = a.querySelector(".pc-wine-name").textContent;
+      let name2 = b.querySelector(".pc-wine-name").textContent;
+      if (name1 == name2) return 0;
+      else if (name1 < name2) return 1;
+      else return -1;
+    }
+    productCardsArray.sort(sortByPrice);
+    for (let i = 0; i < productCardsArray.length; i++) {
+      parent.appendChild(productCardsArray[i]);
+    }
+  }
+});
+
 document.querySelector("#sort").addEventListener("click", () => {});
 // PRODUCT CARD TEMPLATE
 
