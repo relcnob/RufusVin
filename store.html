@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex,nofollow" />
-    <title>RufusVin - Homepage</title>
+    <title>RufusVin - Store</title>
     <link rel="stylesheet" href="style/main.css" />
 	<link rel="stylesheet" href="style/product-list.css" />
     <link
@@ -72,10 +72,10 @@
 			<div class="product-list-ui">
 				<select id="sort" name="sort">
 					<option value="default">Sorting</option>
-					<option value="A-Z">Sort A-Z</option>
-					<option value="Z-A">Sort Z-A</option>
-					<option value="Price ascending">Price low-to-high</option>
-					<option value="Price descending">Price high-to-low</option>
+					<option value="alph-desc">Sort A-Z</option>
+					<option value="alph-asc">Sort Z-A</option>
+					<option value="price-asc">Price low-to-high</option>
+					<option value="price-desc">Price high-to-low</option>
 				  </select>
 				  <span id="open-filters">Filters</span>
 			</div>
@@ -84,200 +84,297 @@
 			<img src="assets/icons/ico-close.svg" class="filter-close" />
 			<form>
 			<section class="product-list-filter-wrapper">
-				<h3>Filter header</h3>
+				<h3>Wine type</h3>
 				<section class="filter-list">
 				<div>
-					<input type="checkbox" id="option-1" name="option-1">
-					<label for="option-1">Option 1</label>
+					<input type="checkbox" id="wine-type-red" name="wine-type" value="Red">
+					<label for="wine-type-red">Red</label>
 				  </div>
 				  <div>
-					<input type="checkbox" id="option-2" name="option-2">
-					<label for="option-2">Option 2</label>
+					<input type="checkbox" id="wine-type-white" name="wine-type" value="White">
+					<label for="wine-type-white">White</label>
 				  </div>
 				  <div>
-					<input type="checkbox" id="option-3" name="option-3">
-					<label for="option-3">Option 3</label>
+					<input type="checkbox" id="wine-type-rose" name="wine-type" value="Rose">
+					<label for="wine-type-rose">Rose</label>
 				  </div>
 				  <div>
-					<input type="checkbox" id="option-3" name="option-3">
-					<label for="option-3">Option 3</label>
-				  </div>
-				  <div>
-					<input type="checkbox" id="option-3" name="option-3">
-					<label for="option-3">Option 3</label>
-				  </div>
-				  <div>
-					<input type="checkbox" id="option-3" name="option-3">
-					<label for="option-3">Option 3</label>
-				  </div>
-				  <div>
-					<input type="checkbox" id="option-3" name="option-3">
-					<label for="option-3">Option 3</label>
+					<input type="checkbox" id="wine-type-sparkling" name="wine-type" value="Sparkling">
+					<label for="wine-type-sparkling">Sparkling</label>
 				  </div>
 				</section>
 			</section>
 			<section class="product-list-filter-wrapper">
-				<h3>Filter header</h3>
+				<h3>Country</h3>
 				<section class="filter-list">
 					<div>
-						<input type="checkbox" id="option-1" name="option-1">
-						<label for="option-1">Option 1</label>
+						<input type="checkbox" id="wine-country-italy" name="wine-country" value="Italy">
+						<label for="wine-country-italy">Italy</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-2" name="option-2">
-						<label for="option-2">Option 2</label>
+						<input type="checkbox" id="wine-country-france" name="wine-country" value="France">
+						<label for="wine-country-france">France</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-country-germany" name="wine-country" value="Germany">
+						<label for="wine-country-germany">Germany</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-country-belgium" name="wine-country" value="Belgium">
+						<label for="wine-country-belgium">Belgium</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-country-portugal" name="wine-country" value="Portugal">
+						<label for="wine-country-portugal">Portugal</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-country-spain" name="wine-country" value="Spain">
+						<label for="wine-country-spain">Spain</label>
 					  </div>
 					</section>
 			</section>
 			<section class="product-list-filter-wrapper">
-				<h3>Filter header</h3>
+				<h3>Region</h3>
 				<section class="filter-list">
 					<div>
-						<input type="checkbox" id="option-1" name="option-1">
-						<label for="option-1">Option 1</label>
+						<input type="checkbox" id="wine-region-rioja" name="wine-region" value="Rioja">
+						<label for="wine-region-rioja">Rioja</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-2" name="option-2">
-						<label for="option-2">Option 2</label>
+						<input type="checkbox" id="wine-region-bordeaux" name="wine-region"  value="Bordeaux">
+						<label for="wine-region-bordeaux">Bordeaux</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-region-tuscany" name="wine-region" value="Tuscany">
+						<label for="wine-region-tuscany">Tuscany</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-region-rheingau" name="wine-region" value="Rheingau">
+						<label for="wine-region-rheingau">Rheingau</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-region-nahe" name="wine-region" value="Nahe">
+						<label for="wine-region-nahe">Nahe</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-region-ruwer" name="wine-region" value="Ruwer">
+						<label for="wine-region-ruwer">Ruwer</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-region-burgundy" name="wine-region" value="Burgundy">
+						<label for="wine-region-burgundy">Burgundy</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-brezeme" name="wine-region" value="Brezeme">
+						<label for="wine-region-brezeme">Brezeme</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-champagne" name="wine-region" value="Champagne">
+						<label for="wine-region-champagne">Champagne</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-pfalz" name="wine-region" value="Pfalz">
+						<label for="wine-region-pfalz">Pfalz</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-franconia" name="wine-region" value="Franconia">
+						<label for="wine-region-franconia">Franconia</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-lisbon" name="wine-region" value="Lisbon">
+						<label for="wine-region-lisbon">Lisbon</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-porto" name="wine-region" value="Porto">
+						<label for="wine-region-porto">Porto</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-antwerp" name="wine-region" value="Antwerp">
+						<label for="wine-region-antwerp">Antwerp</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-wallonie" name="wine-region" value="Wallonie">
+						<label for="wine-region-wallonie">Wallonie</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-bree" name="wine-region" value="Bree">
+						<label for="wine-region-bree">Bree</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-sicily" name="wine-region" value="Sicily">
+						<label for="wine-region-sicily">Sicily</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-piemonte" name="wine-region" value="Piemonte">
+						<label for="wine-region-piemonte">Piemonte</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-limburg" name="wine-region" value="Limburg">
+						<label for="wine-region-limburg">Limburg</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-region-Chablis" name="wine-region" value="Chablis">
+						<label for="wine-region-Chablis">Chablis</label>
 					  </div>
 					</section>
 			</section>
 			<section class="product-list-filter-wrapper">
-				<h3>Filter header</h3>
+				<h3>Wine style</h3>
 				<section class="filter-list">
 					<div>
-						<input type="checkbox" id="option-1" name="option-1">
-						<label for="option-1">Option 1</label>
+						<input type="checkbox" id="wine-style-rioja red" name="wine-style" value="Rioja red">
+						<label for="wine-style-rioja red">Rioja Red</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-2" name="option-2">
-						<label for="option-2">Option 2</label>
+						<input type="checkbox" id="wine-style-rioja white" name="wine-style" value="Rioja white">
+						<label for="wine-style-rioja white">Rioja White</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-style-bordeaux" name="wine-style" value="Bordeaux">
+						<label for="wine-style-bordeaux">Bordeaux</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-style-sangiovese" name="wine-style" value="Sangiovese">
+						<label for="wine-style-sangiovese">Sangiovese</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-style-riesling" name="wine-style" value="Riesling">
+						<label for="wine-style-riesling">Riesling</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-style-german spatburgunder" name="wine-style-german spatburgunder" value="German Spätburgunder">
+						<label for="wine-style-german spatburgunder">German Spätburgunder
+						</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="wine-style-burgundy red" name="wine-style" value="Burgundy red">
+						<label for="wine-style-burgundy red">Burgundy Red
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-burgundy white" name="wine-style" value="Burgundy white">
+						<label for="wine-style-burgundy white">Burgundy White
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-chablis white" name="wine-style" value="Chablis white">
+						<label for="wine-style-chablis white">Chablis White
+
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-loire red" name="wine-style" value="Loire red">
+						<label for="wine-style-loire red">Loire Red
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-french syrah" name="wine-style" value="French syrah">
+						<label for="wine-style-french syrah">French Syrah
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-merlot" name="wine-style" value="Merlot">
+						<label for="wine-style-merlot">Merlot
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-champagne" name="wine-style" value="Champagne">
+						<label for="wine-style-champagne">Champagne
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-lisbon red" name="wine-style" value="Lisbon red">
+						<label for="wine-style-lisbon red">Lisbon Red
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-lisbon white" name="wine-style" value="Lisbon white">
+						<label for="wine-style-lisbon white">Lisbon White
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-port wine" name="wine-style" value="Port wine">
+						<label for="wine-style-port wine">Port Wine
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-belgian chardonnay" name="wine-style" value="Belgian chardonnay">
+						<label for="wine-style-belgian chardonnay">Belgian Chardonnay
+
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-sicilian red" name="wine-style" value="Sicilian red">
+						<label for="wine-style-sicilian red">Sicilian Red
+
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-italian barolo" name="wine-style" value="Italian barolo">
+						<label for="wine-style-italian barolo">Italian Barolo
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-spumante" name="wine-style" value="Spumante">
+						<label for="wine-style-spumante">Spumante
+
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-sparkling" name="wine-style" value="Sparkling">
+						<label for="wine-style-sparkling">Sparkling
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-erbaluce white" name="wine-style" value="Erbaluce white">
+						<label for="wine-style-erbaluce white">Erbaluce White
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-Pet Nat Rose" name="wine-style" value="Pet nat rosé">
+						<label for="wine-style-Pet Nat Rose">Pet Nat Rosé
+						</label>
+					  </div>
+					  <div>
+						<input type="checkbox" id="wine-style-Pinot Noir" name="wine-style" value="Pinot noir">
+						<label for="wine-style-Pinot Noir">Pinot Noir
+						</label>
 					  </div>
 					</section>
 			</section>
 			<section class="product-list-filter-wrapper">
-				<h3>Filter header</h3>
+				<h3>Food pairing</h3>
 				<section class="filter-list">
 					<div>
-						<input type="checkbox" id="option-1" name="option-1">
-						<label for="option-1">Option 1</label>
+						<input type="checkbox" id="food-pairing-beef" name="food-pairing" value="beef">
+						<label for="food-pairing-beef">Beef</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-2" name="option-2">
-						<label for="option-2">Option 2</label>
+						<input type="checkbox" id="food-pairing-pork" name="food-pairing" value="pork">
+						<label for="food-pairing-pork">Pork</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="food-pairing-fish" name="food-pairing" value="fish">
+						<label for="food-pairing-fish">Fish</label>
 					  </div>
 					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="food-pairing-poultry" name="food-pairing" value="poultry">
+						<label for="food-pairing-poultry">Poultry</label>
 					  </div>
 					</section>
 			</section>
-			<section class="product-list-filter-wrapper">
-				<h3>Filter header</h3>
-				<section class="filter-list">
+			<section class="product-list-filter-wrapper ">
+				<h3>Other</h3>
+				<section class="filter-list range-filters">
+					<input type="range" id="min-price" name="min-price"
+         min="89" max="3999" value="0" oninput="document.querySelector('#min-price-label').value = `Minimum price: ` +this.value + ` kr.`">
+		 <output id="min-price-label">Minimum price: 89 kr.</output>
+		 <input type="range" id="max-price" name="max-price"
+         min="89" max="3999" value="3999" oninput="document.querySelector('#max-price-label').value = `Maximum price: ` +this.value + ` kr.`">
+		 <output id="max-price-label">Maximum price: 3999 kr.</output>
 					<div>
-						<input type="checkbox" id="option-1" name="option-1">
-						<label for="option-1">Option 1</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-2" name="option-2">
-						<label for="option-2">Option 2</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
-					  </div>
-					  <div>
-						<input type="checkbox" id="option-3" name="option-3">
-						<label for="option-3">Option 3</label>
+						<input type="checkbox" id="natural-wine" name="natural-wine" value="1">
+						<label for="natural-wine">Natural</label>
 					  </div>
 					</section>
 			</section>
@@ -286,161 +383,28 @@
 		</section>
 		<section class="product-list-wrapper">
 <!-- product cards here -->
-<article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-  <article class="product-card">
-	<a href="product-page.html">
-	  <section class="pc-icon-wrapper">
-		<span class="pc-ico-country pc-ico-flag-fr"></span>
-		<span class="pc-ico-type pc-ico-red" ></span>
-		<span class="pc-ico-food-1 pc-ico-beef "></span>
-		<span class="pc-ico-food-2 pc-ico-fish"></span>
-		<span class="pc-ico-natural pc-ico-leaf"></span>
-		<span class="pc-ico-rating">4.5</span>
-	  </section>
-	  <section class="pc-desc-wrapper">
-		<p class="pc-price">299 kr.</p>
-		<p class="pc-producer">Domaine Guy Robin & Fils </p>
-		<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-		<p class="pc-wine-type">Burgundy Chablis</p>
-	  </section>
-	  <img src="assets/images/placeholder.png" alt="wine-name">
-	</a>
-  </article>
-
 		</section>
-
+<template id="product-card-template">
+	<article class="product-card">
+		<a href="product-page.html">
+		  <section class="pc-icon-wrapper">
+			<span class="pc-ico-country"></span>
+			<span class="pc-ico-type" ></span>
+			<span class="pc-ico-food-1 "></span>
+			<span class="pc-ico-food-2"></span>
+			<span class="pc-ico-natural"></span>
+			<span class="pc-ico-rating">4.5</span>
+		  </section>
+		  <section class="pc-desc-wrapper">
+			<p class="pc-price">299 kr.</p>
+			<p class="pc-producer">Domaine Guy Robin & Fils </p>
+			<p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
+			<p class="pc-wine-type">Burgundy Chablis</p>
+		  </section>
+		  <img src="assets/images/placeholder.png" alt="wine-name">
+		</a>
+	  </article>
+</template>
 
     </main>
     <footer>
@@ -498,5 +462,6 @@
     </footer>
     <script src="scripts/menu.js"></script>
 	<script src="scripts/product-list-filters.js"></script>
+	<script src="scripts/store-page.js"></script>
   </body>
 </html>
