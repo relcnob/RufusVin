@@ -166,6 +166,43 @@
   font-weight: 600;
 }
 
+.news-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-width: 1600px;
+  margin: auto;
+  padding: var(--sectionPadding);
+}
+
+.news-post-wrapper {
+  color: var(--colorText);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: var(--sectionPadding);
+  box-shadow: 0px 0px 10px hsl(247deg 5% 75%);
+}
+
+.news-post-wrapper h1 {
+  color: var(--colorMain);
+}
+
+.news-post-image-wrapper {
+  display: flex;
+  background: url(../assets/images/wine-club.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10rem 0;
+  order: -1;
+}
+.post-details p {
+  color: var(--colorMain);
+}
 @media screen and (min-width: 768px) {
   .contact-form {
     grid-template-columns: repeat(2, 1fr);
@@ -184,5 +221,11 @@
   }
   .contact-form {
     gap: 2rem;
+  }
+  .news-page-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news-post-image-wrapper {
+    order: 2;
   }
 }
