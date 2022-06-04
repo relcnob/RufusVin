@@ -667,7 +667,7 @@ main .breadcrumbs {
   top: 1rem;
   left: 1rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-direction: column;
 }
 .pc-icon-wrapper span {
@@ -717,9 +717,15 @@ main .breadcrumbs {
 
 /* pc-icons */
 
+.pc-ico-natural {
+  display: none !important;
+}
+
 .pc-ico-leaf {
   background-image: url(../assets/icons/ico-leaf.svg);
+  display: block !important;
 }
+
 /* wine types */
 .pc-ico-red {
   background-image: url(../assets/icons/ico-wine-red.svg);
@@ -749,8 +755,23 @@ main .breadcrumbs {
 }
 
 /* flags */
-.pc-ico-flag-fr {
+.pc-ico-flag-France {
   background-image: url(../assets/icons/flags/fr.svg);
+}
+.pc-ico-flag-Belgium {
+  background-image: url(../assets/icons/flags/be.svg);
+}
+.pc-ico-flag-Portugal {
+  background-image: url(../assets/icons/flags/pt.svg);
+}
+.pc-ico-flag-Italy {
+  background-image: url(../assets/icons/flags/it.svg);
+}
+.pc-ico-flag-Germany {
+  background-image: url(../assets/icons/flags/de.svg);
+}
+.pc-ico-flag-Spain {
+  background-image: url(../assets/icons/flags/es.svg);
 }
 
 /* rating wrapper*/
@@ -1070,7 +1091,7 @@ main .breadcrumbs {
     font-size: 0.9rem;
   }
   .pc-icon-wrapper {
-    gap: 0.2rem;
+    gap: 0.5rem;
     top: 0.5rem;
     left: 0.5rem;
   }
