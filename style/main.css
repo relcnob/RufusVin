@@ -69,7 +69,7 @@ h2,
 h3 {
   font-family: var(--fontUI);
   letter-spacing: 1px;
-  color: var(--colorMainDarker);
+  color: var(--colorMainDark);
 }
 
 h1 {
@@ -509,6 +509,9 @@ main .breadcrumbs {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-left: var(--sectionPadding);
+}
+.breadcrumbs span {
+  color: var(--colorMainDark);
 }
 
 /* homepage */

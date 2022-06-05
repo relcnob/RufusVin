@@ -53,12 +53,19 @@
 
     </header>
     <main>
-        <div class="spacer"></div>
+        <section class="wine-club-pop-up">
+            <div>
+                <image src="assets/icons/ico-close.svg"></image>
+                <h3>Welcome to the club!</h3>
+                <p>Thank you for joining our amazing wine club!</p> <p>We hope you will enjoy the 4 staff-selected wines of this month.</p>
+                <a  href="index.html" class="button-2"> BACK TO HOMEPAGE</a>
+            </div>
+        </section>
         <section class="breadcrumbs">
             <a href="index.html">Home</a>
             <span>Wine Club</span>
             </section>
-            <div class="spacer"></div>
+            
         <section class="content-pages-wrapper">
             <div class="content-pages-text-box">
                 <h1>Wine Club</h1>
@@ -71,89 +78,38 @@
                 <p>The concept is simple. You can join the Wine Club as a member for a monthly fee, or you can make a
                     one time purchase of the curated Wine Box. Give it a chance, you never know what you're missing on.
                 </p>
-                <a class="button-2">JOIN HERE</a>
+                <a id="wine-club-join" class="button-2">JOIN HERE</a>
             </div>
             <div class="wine-club-image-wrapper">
             </div>
         </section>
-        <section class="home-new-in-store">
+        <section class="wine-club-info">
             <h1>JUNE 2022 WINE BOX</h1>
-            <article class="product-card">
-                <a href="product-page.html">
-                    <section class="pc-icon-wrapper">
-                        <span class="pc-ico-country pc-ico-flag-fr"></span>
-                        <span class="pc-ico-type pc-ico-red"></span>
-                        <span class="pc-ico-food-1 pc-ico-beef "></span>
-                        <span class="pc-ico-food-2 pc-ico-fish"></span>
-                        <span class="pc-ico-natural pc-ico-leaf"></span>
+        </section>
+        <section class="wine-club-wrapper">
+            <!-- template -->
+            <template id="product-card-template">
+                <article class="product-card">
+                    <a href="product-page.html">
+                      <section class="pc-icon-wrapper">
+                        <span class="pc-ico-country"></span>
+                        <span class="pc-ico-type" ></span>
+                        <span class="pc-ico-food-1 "></span>
+                        <span class="pc-ico-food-2"></span>
+                        <span class="pc-ico-natural"></span>
                         <span class="pc-ico-rating">4.5</span>
-                    </section>
-                    <section class="pc-desc-wrapper">
+                      </section>
+                      <section class="pc-desc-wrapper">
                         <p class="pc-price">299 kr.</p>
                         <p class="pc-producer">Domaine Guy Robin & Fils </p>
                         <p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
                         <p class="pc-wine-type">Burgundy Chablis</p>
-                    </section>
-                    <img src="assets/images/placeholder.png" alt="wine-name">
-                </a>
-            </article>
-            <article class="product-card">
-                <a href="product-page.html">
-                    <section class="pc-icon-wrapper">
-                        <span class="pc-ico-country pc-ico-flag-fr"></span>
-                        <span class="pc-ico-type pc-ico-red"></span>
-                        <span class="pc-ico-food-1 pc-ico-beef "></span>
-                        <span class="pc-ico-food-2 pc-ico-fish"></span>
-                        <span class="pc-ico-natural pc-ico-leaf"></span>
-                        <span class="pc-ico-rating">4.5</span>
-                    </section>
-                    <section class="pc-desc-wrapper">
-                        <p class="pc-price">299 kr.</p>
-                        <p class="pc-producer">Domaine Guy Robin & Fils </p>
-                        <p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-                        <p class="pc-wine-type">Burgundy Chablis</p>
-                    </section>
-                    <img src="assets/images/placeholder.png" alt="wine-name">
-                </a>
-            </article>
-            <article class="product-card">
-                <a href="product-page.html">
-                    <section class="pc-icon-wrapper">
-                        <span class="pc-ico-country pc-ico-flag-fr"></span>
-                        <span class="pc-ico-type pc-ico-red"></span>
-                        <span class="pc-ico-food-1 pc-ico-beef "></span>
-                        <span class="pc-ico-food-2 pc-ico-fish"></span>
-                        <span class="pc-ico-natural pc-ico-leaf"></span>
-                        <span class="pc-ico-rating">4.5</span>
-                    </section>
-                    <section class="pc-desc-wrapper">
-                        <p class="pc-price">299 kr.</p>
-                        <p class="pc-producer">Domaine Guy Robin & Fils </p>
-                        <p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-                        <p class="pc-wine-type">Burgundy Chablis</p>
-                    </section>
-                    <img src="assets/images/placeholder.png" alt="wine-name">
-                </a>
-            </article>
-            <article class="product-card">
-                <a href="product-page.html">
-                    <section class="pc-icon-wrapper">
-                        <span class="pc-ico-country pc-ico-flag-fr"></span>
-                        <span class="pc-ico-type pc-ico-red"></span>
-                        <span class="pc-ico-food-1 pc-ico-beef "></span>
-                        <span class="pc-ico-food-2 pc-ico-fish"></span>
-                        <span class="pc-ico-natural pc-ico-leaf"></span>
-                        <span class="pc-ico-rating">4.5</span>
-                    </section>
-                    <section class="pc-desc-wrapper">
-                        <p class="pc-price">299 kr.</p>
-                        <p class="pc-producer">Domaine Guy Robin & Fils </p>
-                        <p class="pc-wine-name">Chablis 1er Cru ‘Montee de Tonnerre</p>
-                        <p class="pc-wine-type">Burgundy Chablis</p>
-                    </section>
-                    <img src="assets/images/placeholder.png" alt="wine-name">
-                </a>
-            </article>
+                      </section>
+                      <img src="assets/images/placeholder.png" alt="wine-name">
+                    </a>
+                  </article>
+            </template>
+            
         </section>
     </main>
     <footer>
@@ -212,6 +168,7 @@
         <div class="copyright"> &copy; 2022 Derail Department</div>
     </footer>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/wine-club.js"></script>
 </body>
 
 </html>

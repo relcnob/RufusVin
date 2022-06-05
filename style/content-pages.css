@@ -203,12 +203,76 @@
 .post-details p {
   color: var(--colorMain);
 }
+
+.wine-club-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: var(--sectionPadding);
+}
+
+.wine-club-info {
+  max-width: 1600px;
+  margin: auto;
+  padding: var(--sectionPadding);
+}
+
+.wine-club-pop-up {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 30;
+  top: 0;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.wine-club-pop-up-visible {
+  display: flex;
+  visibility: initial;
+  pointer-events: initial;
+}
+
+.wine-club-pop-up div {
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15rem;
+  padding: 3rem var(--sectionPadding);
+  gap: 1rem;
+  text-align: center;
+  max-width: 90%;
+}
+
+.wine-club-pop-up div img {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 36px;
+  cursor: pointer;
+}
+.wine-club-pop-up div span {
+  margin: 0;
+}
+
 @media screen and (min-width: 768px) {
   .contact-form {
     grid-template-columns: repeat(2, 1fr);
   }
   .contact-page-info-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .wine-club-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -227,5 +291,17 @@
   }
   .news-post-image-wrapper {
     order: 2;
+  }
+  .wine-club-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wine-club-wrapper {
+    gap: 2rem;
+    max-width: 1600px;
+    margin: auto;
   }
 }
