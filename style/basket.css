@@ -138,7 +138,11 @@
   display: flex;
   flex-direction: column;
   background: #fff;
-  justify-content: spa;
+  box-shadow: 0px 0px 10px hsl(247, 5%, 75%);
+}
+
+.checkout-wrapper {
+  box-shadow: 0px 0px 10px hsl(247, 5%, 75%);
 }
 
 .long-input {
