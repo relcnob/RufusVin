@@ -19,3 +19,13 @@ searchBtn.addEventListener("click", () => {
 searchClose.addEventListener("click", () => {
   searchBar.classList.remove("searchbar-visible");
 });
+
+const searchbar = document.querySelector(".header-searchbar input");
+
+searchbar.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    window.location.href = "store.html?search=" + searchbar.value;
+    console.log("enter");
+  }
+});
