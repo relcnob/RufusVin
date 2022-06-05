@@ -47,6 +47,7 @@ img {
 
 header {
   background: #fff;
+  overflow-x: hidden;
 }
 
 header nav ul {
@@ -63,6 +64,7 @@ footer {
 
 main {
   width: 100%;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -257,6 +259,9 @@ h1 {
 
 /* footer */
 
+footer {
+  overflow-x: hidden;
+}
 .footer-wrapper {
   color: #fff;
   padding: 2rem;
@@ -531,16 +536,60 @@ main .breadcrumbs {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #972230;
   transition: 0.5s ease-in-out;
 }
+.slide-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/images/slider-image-1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .slide-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   left: 100%;
-  background: #6b3d8a;
+  background: url(../assets/images/slider-image-2.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .slide-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   left: 200%;
-  background: #58a152;
+  background: url(../assets/images/slider-image-3.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.homepage-welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 5rem;
+  max-width: 60%;
+  gap: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: var(--sectionPadding);
+}
+
+.homepage-welcome-wrapper h1,
+.homepage-welcome-wrapper p {
+  color: #fff;
+}
+.homepage-welcome-wrapper h1 {
+  font-size: 25px;
 }
 
 .pos-1 {
@@ -947,6 +996,9 @@ main .breadcrumbs {
   .newsletter-form-wrapper input[type="submit"] {
     padding: 0.9rem 3rem;
     font-size: 1rem;
+  }
+  .homepage-welcome-wrapper h1 {
+    font-size: 2.5rem;
   }
 }
 
