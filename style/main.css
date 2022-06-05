@@ -137,6 +137,11 @@ h1 {
 
 /* menu animation */
 
+.menu-toggle.open {
+  position: fixed;
+  right: 0px;
+}
+
 .menu-toggle.open .burger {
   transform: translateX(-50px);
   background: transparent;
@@ -514,11 +519,9 @@ main .breadcrumbs {
   padding-left: var(--sectionPadding);
 }
 
-
 .breadcrumbs span {
   color: var(--colorMainDark);
 }
-
 
 /* homepage */
 
@@ -1054,6 +1057,7 @@ main .breadcrumbs {
     top: auto;
     right: auto;
   }
+
   .menu-toggle {
     display: none;
     visibility: hidden;
