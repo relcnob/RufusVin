@@ -264,12 +264,13 @@
 }
 
 .favorites-pages-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   max-width: 1600px;
   margin: auto;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50%;
+  width: fit-content;
   padding: var(--sectionPadding);
 }
 
@@ -283,6 +284,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   background: #fff;
   gap: 1rem;
   padding: var(--sectionPadding);
