@@ -1,0 +1,68 @@
+.account-wrapper {
+  background-color: white;
+  max-width: 50%;
+  max-height: 30%;
+  margin: 5% auto;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#create,
+#signin {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .account-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .account-wrapper {
+    flex-direction: row;
+    gap: 5%;
+  }
+  .create,
+  .signin {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .signin {
+    width: 70%;
+  }
+  .create {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .account-wrapper {
+    flex-direction: row;
+  }
+  .account-wrapper:after {
+    border-right: red 1px solid;
+    min-height: 70%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    transform: translate(-50%);
+    content: "";
+  }
+  .create,
+  .signin {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3%;
+  }
+  .signin {
+    width: 70%;
+  }
+  .create {
+    width: 40%;
+  }
+}
