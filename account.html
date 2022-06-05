@@ -71,36 +71,45 @@
         <div class="signin">
           <h1>Sign In</h1>
           <form id="signin">
-            <label for="signin-email">Email</label>
-            <input type="email" name="email" id="signin-email" required />
-            <label for="signin-password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="signin-password"
-              required
-            />
+            <label for="signin-email" class="lable">Email</label>
+            <input type="email" name="email" id="signin-email" />
+            <label for="signin-password" class="lable">Password</label>
+            <input type="password" name="password" id="signin-password" />
+            <button
+              onclick="accountAlert()"
+              type="button"
+              class="account-button"
+            >
+              Sign In
+            </button>
           </form>
-          <button type="button">Sign In</button>
         </div>
         <div class="create">
-          <h1>Create Account</h1>
+          <h3>Create Account</h3>
           <form id="create">
-            <label for="create-name">Name</label>
-            <input type="text" name="name" id="create-name" required />
-            <label for="create-email">Email</label>
-            <input type="email" name="email" id="create-email" required />
-            <label for="create-password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="create-password"
-              required
-            />
+            <label for="create-name" class="lable">Name</label>
+            <input type="text" name="name" id="create-name" />
+            <label for="create-email" class="lable">Email</label>
+            <input type="email" name="email" id="create-email" />
+            <label for="create-password" class="lable">Password</label>
+            <input type="password" name="password" id="create-password" />
+            <button
+              onclick="accountAlert()"
+              type="button"
+              class="account-button"
+            >
+              Create
+            </button>
           </form>
-          <button type="button">Create</button>
         </div>
       </section>
+      <div id="alert" class="hidden">
+        <h2>We are sorry!</h2>
+        <p>
+          Accounts are disabled at this current time. We thank you for your
+          understanding.
+        </p>
+      </div>
     </main>
     <footer>
       <section class="footer-wrapper">
@@ -177,5 +186,20 @@
       </section>
       <div class="copyright">&copy; 2022 Derail Department</div>
     </footer>
+    <script src="scripts/menu.js"></script>
+    <script>
+      var alert = document.getElementById("alert");
+      function accountAlert() {
+        document.querySelector("#alert").classList.remove("hidden");
+      }
+      document
+        .querySelector("body")
+        .addEventListener("mouseup", function (event) {
+          if (alert.classList.contains("hidden")) {
+          } else {
+            alert.classList.add("hidden");
+          }
+        });
+    </script>
   </body>
 </html>
