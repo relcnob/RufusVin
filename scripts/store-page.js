@@ -13,6 +13,7 @@ let filterWinePairing = urlFilters.searchParams.getAll("food-pairing");
 let filterMinPrice = urlFilters.searchParams.getAll("min-price");
 let filterMaxPrice = urlFilters.searchParams.getAll("max-price");
 let filterNatural = urlFilters.searchParams.getAll("natural-wine");
+let searchTerm = urlFilters.searchParams.getAll("search");
 // console.log(filterWineType);
 // console.log(filterWineCountry);
 // console.log(filterWineRegion);
@@ -130,43 +131,86 @@ function handleProductList(data) {
 const parent = document.querySelector(".product-list-wrapper");
 
 function showProductList(product) {
-  //GRAB TEMPLATE
+  if (searchTerm.length !== 0) {
+    console.log(product.winename.toLowerCase().indexOf(searchTerm[0]));
+    if (
+      product.winename.toLowerCase().indexOf(searchTerm[0].toLowerCase()) == 0
+    ) {
+      //GRAB TEMPLATE
+      const template = document.querySelector("#product-card-template").content;
+      //CLONE TEMPLATE
+      const myClone = template.cloneNode(true);
+      //POPULATE TEMPLATE
+      myClone.querySelector(" a ").href = "product-page.html?id=" + product.id;
+      myClone.querySelector(".pc-price").textContent =
+        product.wineprice + " kr";
+      myClone.querySelector(".pc-producer").textContent = product.wineproducer;
+      myClone.querySelector(".pc-wine-name").textContent = product.winename;
+      myClone.querySelector(".pc-wine-type").textContent =
+        product.wineregion + " " + product.winegrape;
+      myClone.querySelector(".product-card img").src = product.winepic1.guid;
+      myClone.querySelector(".product-card img").alt = product.winename;
+      // flag
+      myClone
+        .querySelector(".pc-ico-country")
+        .classList.add("pc-ico-flag-" + product.winecountry);
+      // points
+      myClone.querySelector(".pc-ico-rating").textContent = product.winerating;
+      // food
+      let foodPairings = product.winefoodpairing.split(",");
+      myClone
+        .querySelector(".pc-ico-food-1")
+        .classList.add("pc-ico-" + foodPairings[0]);
+      myClone
+        .querySelector(".pc-ico-food-2")
+        .classList.add("pc-ico-" + foodPairings[1]);
+      if (product.winenatural == 1) {
+        myClone.querySelector(".pc-ico-natural").classList.add("pc-ico-leaf");
+      }
+      wineType = product.winetype.toLowerCase();
+      myClone.querySelector(".pc-ico-type").classList.add("pc-ico-" + wineType);
 
-  const template = document.querySelector("#product-card-template").content;
+      //  APPEND PRODUCT
+      parent.appendChild(myClone);
+    } else {
+    }
+  } else {
+    //GRAB TEMPLATE
+    const template = document.querySelector("#product-card-template").content;
+    //CLONE TEMPLATE
+    const myClone = template.cloneNode(true);
+    //POPULATE TEMPLATE
+    myClone.querySelector(" a ").href = "product-page.html?id=" + product.id;
+    myClone.querySelector(".pc-price").textContent = product.wineprice + " kr";
+    myClone.querySelector(".pc-producer").textContent = product.wineproducer;
+    myClone.querySelector(".pc-wine-name").textContent = product.winename;
+    myClone.querySelector(".pc-wine-type").textContent =
+      product.wineregion + " " + product.winegrape;
+    myClone.querySelector(".product-card img").src = product.winepic1.guid;
+    myClone.querySelector(".product-card img").alt = product.winename;
+    // flag
+    myClone
+      .querySelector(".pc-ico-country")
+      .classList.add("pc-ico-flag-" + product.winecountry);
+    // points
+    myClone.querySelector(".pc-ico-rating").textContent = product.winerating;
+    // food
+    let foodPairings = product.winefoodpairing.split(",");
+    myClone
+      .querySelector(".pc-ico-food-1")
+      .classList.add("pc-ico-" + foodPairings[0]);
+    myClone
+      .querySelector(".pc-ico-food-2")
+      .classList.add("pc-ico-" + foodPairings[1]);
+    if (product.winenatural == 1) {
+      myClone.querySelector(".pc-ico-natural").classList.add("pc-ico-leaf");
+    }
+    wineType = product.winetype.toLowerCase();
+    myClone.querySelector(".pc-ico-type").classList.add("pc-ico-" + wineType);
 
-  //CLONE TEMPLATE
-  const myClone = template.cloneNode(true);
-  //POPULATE TEMPLATE
-  myClone.querySelector(" a ").href = "product-page.html?id=" + product.id;
-  myClone.querySelector(".pc-price").textContent = product.wineprice + " kr";
-  myClone.querySelector(".pc-producer").textContent = product.wineproducer;
-  myClone.querySelector(".pc-wine-name").textContent = product.winename;
-  myClone.querySelector(".pc-wine-type").textContent =
-    product.wineregion + " " + product.winegrape;
-  myClone.querySelector(".product-card img").src = product.winepic1.guid;
-  myClone.querySelector(".product-card img").alt = product.winename;
-  // flag
-  myClone
-    .querySelector(".pc-ico-country")
-    .classList.add("pc-ico-flag-" + product.winecountry);
-  // points
-  myClone.querySelector(".pc-ico-rating").textContent = product.winerating;
-  // food
-  let foodPairings = product.winefoodpairing.split(",");
-  myClone
-    .querySelector(".pc-ico-food-1")
-    .classList.add("pc-ico-" + foodPairings[0]);
-  myClone
-    .querySelector(".pc-ico-food-2")
-    .classList.add("pc-ico-" + foodPairings[1]);
-  if (product.winenatural == 1) {
-    myClone.querySelector(".pc-ico-natural").classList.add("pc-ico-leaf");
+    //  APPEND PRODUCT
+    parent.appendChild(myClone);
   }
-  wineType = product.winetype.toLowerCase();
-  myClone.querySelector(".pc-ico-type").classList.add("pc-ico-" + wineType);
-
-  //  APPEND PRODUCT
-  parent.appendChild(myClone);
 }
 
 // SORTING
@@ -178,9 +222,11 @@ sortingOption.addEventListener("click", () => {
     // PRICE ASCENDING
     let productCards = parent.children;
     let productCardsArray = [];
+    console.log(productCards);
     for (let i = 0; i < productCards.length; i++) {
       productCardsArray.push(productCards[i]);
     }
+    console.log(productCardsArray);
     function sortByPrice(a, b) {
       let price1text = a.querySelector(".pc-price").textContent;
       let price2text = b.querySelector(".pc-price").textContent;
@@ -220,6 +266,7 @@ sortingOption.addEventListener("click", () => {
     // ALPHABETICALLY DESCENDING
     let productCards = parent.children;
     let productCardsArray = [];
+    console.log(productCards.length);
     for (let i = 0; i < productCards.length; i++) {
       productCardsArray.push(productCards[i]);
     }
@@ -234,7 +281,7 @@ sortingOption.addEventListener("click", () => {
     for (let i = 0; i < productCardsArray.length; i++) {
       parent.appendChild(productCardsArray[i]);
     }
-  } else {
+  } else if (sortingOption.value == "alph-asc") {
     // ALPHABETICALLY ASCENDING
     let productCards = parent.children;
     let productCardsArray = [];
