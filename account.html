@@ -65,7 +65,42 @@
         </nav>
       </section>
     </header>
-    <main class="main-account"></main>
+    <main class="main-account">
+      <section class="account-wrapper">
+        <div>
+          <h1>Sign In</h1>
+          <form id="signin">
+            <label for="signin-email">Email</label>
+            <input type="email" name="email" id="signin-email" required />
+            <label for="signin-password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="signin-password"
+              required
+            />
+          </form>
+          <button type="button">Sign In</button>
+        </div>
+        <div>
+          <h1>Create Account</h1>
+          <form id="create">
+            <label for="create-name">Name</label>
+            <input type="text" name="name" id="create-name" required />
+            <label for="create-email">Email</label>
+            <input type="email" name="email" id="create-email" required />
+            <label for="create-password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="create-password"
+              required
+            />
+          </form>
+          <button type="button">Create</button>
+        </div>
+      </section>
+    </main>
     <footer>
       <section class="footer-wrapper">
         <section class="footer-info">
