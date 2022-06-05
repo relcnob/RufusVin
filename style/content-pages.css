@@ -291,6 +291,148 @@
   box-shadow: 0px 0px 10px hsl(247deg 5% 75%);
 }
 
+.account-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-width: 1600px;
+  margin: auto;
+  gap: 1rem;
+  padding: var(--sectionPadding);
+}
+.account-page-wrapper h1 {
+  color: var(--colorMain);
+}
+
+.account-page-text-box {
+  color: var(--colorText);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: var(--sectionPadding);
+  box-shadow: 0px 0px 10px hsl(247deg 5% 75%);
+}
+
+.account-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.account-form div {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.account-form .input-account-username-log-in input[type="text"] {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  border-style: solid;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0.5rem;
+  font-family: var(--fontBody);
+  width: 50%;
+}
+
+.account-form div input[type="password"] {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  border-style: solid;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0.5rem;
+  font-family: var(--fontBody);
+  width: 50%;
+}
+
+.account-form div input[type="email"] {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  border-style: solid;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0.5rem;
+  width: 60%;
+  font-family: var(--fontBody);
+}
+
+/* .input-account-name-register input[type="text"] {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  border-style: solid;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0.5rem;
+  font-family: var(--fontBody);
+  width: 500%;
+} */
+
+.account-form label {
+  color: var(--colorMainDark);
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.account-pop-up {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 30;
+  top: 0;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.account-pop-up-visible {
+  display: flex;
+  visibility: initial;
+  pointer-events: initial;
+}
+
+.account-pop-up div {
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15rem;
+  padding: 3rem var(--sectionPadding);
+  gap: 1rem;
+  text-align: center;
+  max-width: 90%;
+}
+
+.account-pop-up div img {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 36px;
+  cursor: pointer;
+}
+.account-pop-up div span {
+  margin: 0;
+}
+#account-link-3 {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--colorMain);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#account-link-3:hover {
+  filter: brightness(1.4);
+}
+
 @media screen and (min-width: 768px) {
   .contact-form {
     grid-template-columns: repeat(2, 1fr);
@@ -301,6 +443,10 @@
   .wine-club-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+  .account-form {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -325,6 +471,9 @@
     gap: 1rem;
   }
   .favorites-pages-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .account-page-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
