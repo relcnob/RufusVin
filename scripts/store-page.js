@@ -130,7 +130,6 @@ function handleProductList(data) {
 const parent = document.querySelector(".product-list-wrapper");
 
 function showProductList(product) {
-  // console.log(product);
   //GRAB TEMPLATE
 
   const template = document.querySelector("#product-card-template").content;

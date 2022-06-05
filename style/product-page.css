@@ -272,10 +272,21 @@
 .product-temp {
   font-size: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
+}
+
+.product-temp h2 {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: -1rem;
+}
+
+.product-temp span {
   padding: 1rem 0;
   font-style: italic;
   letter-spacing: 2px;
@@ -289,6 +300,16 @@
   padding: 1rem 0;
   position: relative;
   gap: 2rem;
+}
+
+.product-food img {
+  align-self: center;
+  justify-self: center;
+  max-width: 60%;
+}
+
+.product-food h2 {
+  grid-column: 1/-1;
 }
 
 .food-divider {

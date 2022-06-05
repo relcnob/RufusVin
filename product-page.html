@@ -94,13 +94,13 @@
       <div class="product-buy">
         <h1>299,00 kr.</h1>
         <div class="product-add-to-cart">
-          <form class="atc-wrapper">
+          <form class="atc-wrapper" name="product">
             <input type="number" id="quantity" name="quantity" min="1" max="6" value="1" class="atc-counter">
           <div class="atc-buttons">
             <span class="atc-add"><img src="assets/icons/ico-add.svg"></span>
             <span class="atc-remove"><img src="assets/icons/ico-remove.svg"></span>
           </div>
-          <input type="submit" value="ADD TO CART">
+          <input type="submit" value="ADD TO CART" onClick="sendToBasket()">
         </form>
         </div>
       </div>
@@ -111,6 +111,7 @@
     </div>
     <div class="product-add-info-wrapper">
       <section class="product-sliders">
+        <h2>Wine details</h2>
       <div class="wine-slider-wrapper">
         <span>Light</span>
         <span>Bold</span>
@@ -132,8 +133,11 @@
         <span class="wine-slider"></span>
       </div>
       </section>
-      <section class="product-temp">10-12°C</section>
+      <section class="product-temp">
+        <h2>Serving temperature</h2>
+        <span>10-12°C</span></section>
       <section class="product-food">
+        <h2>Food pairing</h2>
         <img src="assets/icons/ico-pork.svg">
         <img src="assets/icons/ico-beef.svg">
       </section>
