@@ -513,9 +513,12 @@ main .breadcrumbs {
   margin-bottom: 1rem;
   padding-left: var(--sectionPadding);
 }
+
+
 .breadcrumbs span {
   color: var(--colorMainDark);
 }
+
 
 /* homepage */
 

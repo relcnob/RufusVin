@@ -82,7 +82,7 @@ function showProduct(product) {
     )
     .classList.add("position-" + product.winesoftness);
   // TEMPERATURE
-  document.querySelector(".product-temp").textContent =
+  document.querySelector(".product-temp span").textContent =
     product.winetemperature + "C";
 
   // REPLACING FOOD ICONS
@@ -118,3 +118,14 @@ document.querySelector(".atc-remove").addEventListener("click", () => {
     document.querySelector("#quantity").value = quantity;
   }
 });
+
+const form = document.querySelector(".atc-wrapper");
+function handleForm(event) {
+  event.preventDefault();
+  window.location.href =
+    "basket.html?id=" +
+    id +
+    "&quantity= " +
+    document.querySelector("#quantity").value;
+}
+form.addEventListener("submit", handleForm);
