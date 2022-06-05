@@ -263,6 +263,32 @@
   margin: 0;
 }
 
+.favorites-pages-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-width: 1600px;
+  margin: auto;
+  gap: 1rem;
+  padding: var(--sectionPadding);
+}
+
+.favorites-pages-wrapper h1 {
+  color: var(--colorMain);
+}
+
+.favorites-page-box {
+  color: var(--colorText);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  gap: 1rem;
+  padding: var(--sectionPadding);
+  box-shadow: 0px 0px 10px hsl(247deg 5% 75%);
+}
+
 @media screen and (min-width: 768px) {
   .contact-form {
     grid-template-columns: repeat(2, 1fr);
@@ -295,6 +321,9 @@
   .wine-club-wrapper {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+  }
+  .favorites-pages-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
