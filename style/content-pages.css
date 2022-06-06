@@ -27,7 +27,7 @@
 }
 .content-pages-image-wrapper {
   display: flex;
-  background: url(../assets/images/about-us-background.jpg);
+  background: url(../assets/images/about-us-background.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,7 +35,7 @@
 }
 .wine-club-image-wrapper {
   display: flex;
-  background: url(../assets/images/wine-club.jpg);
+  background: url(../assets/images/wine-club.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -933,7 +933,7 @@ main .breadcrumbs {
 /* home newsletter */
 
 .home-newsletter {
-  background: url(../assets/images/newsletter-background.jpg);
+  background: url(../assets/images/newsletter-background.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
