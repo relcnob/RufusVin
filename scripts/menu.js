@@ -29,3 +29,45 @@ searchbar.addEventListener("keypress", (event) => {
     console.log("enter");
   }
 });
+
+// AGE CHECKER
+// https://www.w3schools.com/js/js_cookies.asp
+
+function getCookie(cookieName) {
+  let name = cookieName + "=";
+  let ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function ageCheck() {
+  let ageCheckValue = getCookie("ageCheckValue");
+  if (ageCheckValue != "") {
+    console.log(ageCheckValue);
+    document
+      .querySelector(".age-check-wrapper")
+      .classList.add("age-check-hidden");
+  } else {
+    document
+      .querySelector(".age-check-wrapper")
+      .classList.remove("age-check-hidden");
+  }
+}
+
+document.querySelector("#cookie-yes").addEventListener("click", () => {
+  const date = new Date();
+  date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+  console.log(date);
+  let expires = "expires=" + date.toUTCString();
+  document.cookie = "ageCheckValue=true;" + expires + ";path=/";
+  ageCheck();
+});
+ageCheck();
