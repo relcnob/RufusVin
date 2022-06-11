@@ -56,6 +56,9 @@ function ageCheck() {
       .querySelector(".age-check-wrapper")
       .classList.add("age-check-hidden");
   } else {
+    document
+      .querySelector(".age-check-wrapper")
+      .classList.remove("age-check-hidden");
   }
 }
 
