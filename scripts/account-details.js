@@ -43,3 +43,30 @@ document.querySelector(".edit-pop-up div img").addEventListener("click", () => {
     .querySelector(".edit-pop-up")
     .classList.remove("edit-pop-up-visible");
 });
+
+// Newsletter
+
+document
+  .querySelector(".footer-newsletter form")
+  .addEventListener("submit", (event) => {
+    document
+      .querySelector(".newsletter-pop-up")
+      .classList.add("newsletter-pop-up-visible");
+    event.preventDefault();
+  });
+
+document
+  .querySelector(".newsletter-pop-up div img")
+  .addEventListener("click", () => {
+    document
+      .querySelector(".newsletter-pop-up")
+      .classList.remove("newsletter-pop-up-visible");
+  });
+
+document
+  .querySelector("#newsletter-pop-up-button")
+  .addEventListener("click", () => {
+    document
+      .querySelector(".newsletter-pop-up")
+      .classList.remove("newsletter-pop-up-visible");
+  });
