@@ -1077,6 +1077,7 @@ main .breadcrumbs {
   border-radius: 0.5rem;
   overflow: hidden;
   transition: 0.7s cubic-bezier(0.69, -0.43, 0.47, 1.29);
+  z-index: 100;
 }
 
 .chat-header {
