@@ -3,7 +3,7 @@ const mobileMenu = document.querySelector(".header-menu");
 const searchBtn = document.querySelector("#search-icon");
 const searchBar = document.querySelector(".header-searchbar");
 const searchClose = document.querySelector(".searchbar-close");
-
+let messageSent = 0;
 menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("show-menu");
   menuToggle.classList.toggle("open");
@@ -71,3 +71,74 @@ document.querySelector("#cookie-yes").addEventListener("click", () => {
   ageCheck();
 });
 ageCheck();
+
+// chat window
+
+document.querySelector(".chat-window-toggle").addEventListener("click", () => {
+  document.querySelector(".chat-window-wrapper").classList.add("show-chat");
+  document
+    .querySelector(".chat-window-toggle")
+    .classList.add("hide-chat-toggle");
+});
+
+document.querySelector(".chat-header img").addEventListener("click", () => {
+  document.querySelector(".chat-window-wrapper").classList.remove("show-chat");
+  document
+    .querySelector(".chat-window-toggle")
+    .classList.remove("hide-chat-toggle");
+});
+
+// check if not emplty and append messages
+
+document
+  .querySelector(".chat-send-message button")
+  .addEventListener("click", () => {
+    if (document.querySelector(".chat-message-box").value) {
+      const node = document.createElement("span");
+      const header = document.createElement("h3");
+      const textNode = document.createTextNode(
+        document.querySelector(".chat-message-box").value
+      );
+      header.textContent = "You";
+      node.appendChild(header);
+      node.appendChild(textNode);
+      node.classList.add("user-message");
+      document.querySelector(".chat-messages-wrapper").appendChild(node);
+      messageSent = messageSent + 1;
+      setTimeout(checkAndReply, 1300);
+    }
+  });
+
+document
+  .querySelector("#chat-message")
+  .addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      if (document.querySelector(".chat-message-box").value) {
+        const node = document.createElement("span");
+        const header = document.createElement("h3");
+        const textNode = document.createTextNode(
+          document.querySelector(".chat-message-box").value
+        );
+        header.textContent = "You";
+        node.appendChild(header);
+        node.appendChild(textNode);
+        node.classList.add("user-message");
+        document.querySelector(".chat-messages-wrapper").appendChild(node);
+        messageSent = messageSent + 1;
+        setTimeout(checkAndReply, 1000);
+      }
+    }
+  });
+
+function checkAndReply() {
+  const node = document.createElement("span");
+  const header = document.createElement("h3");
+  const textNode = document.createTextNode(
+    "Unfortunately there are no assistants available right now, please send us an email instead!"
+  );
+  header.textContent = "Rufus Vin";
+  node.appendChild(header);
+  node.appendChild(textNode);
+  node.classList.add("assistant-message");
+  document.querySelector(".chat-messages-wrapper").appendChild(node);
+}

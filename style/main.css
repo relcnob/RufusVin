@@ -1040,6 +1040,135 @@ main .breadcrumbs {
   opacity: 0;
   pointer-events: none;
 }
+/* chat bubble */
+
+.chat-window-toggle {
+  display: block;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--colorMain);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.chat-window-toggle img {
+  width: 60%;
+}
+
+.chat-window-wrapper {
+  position: fixed;
+  bottom: 1.5rem;
+  right: -20rem;
+  width: 20rem;
+  height: 30rem;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(66, 66, 67, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: 0.7s cubic-bezier(0.69, -0.43, 0.47, 1.29);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--colorMain);
+  padding: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.chat-header h3 {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.chat-header img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.chat-messages-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+.chat-messages-wrapper span {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  width: 80%;
+}
+
+.chat-messages-wrapper span h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.assistant-message {
+  background: var(--colorMain);
+  color: #fff;
+}
+
+.assistant-message h3 {
+  color: #fff;
+}
+
+.user-message {
+  background-color: var(--colorBg);
+  align-self: flex-end;
+}
+
+.chat-send-message {
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 100%;
+  gap: 0.5rem;
+  border-top: solid 1px #ccc;
+}
+
+.chat-send-message input {
+  width: 100%;
+  padding: 0.3rem;
+  border: solid 1px #ccc;
+  border-radius: 0.4rem;
+}
+
+.chat-send-message button {
+  border: none;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.3rem;
+  width: 100%;
+}
+
+.show-chat {
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.hide-chat-toggle {
+  opacity: 0;
+  transition-delay: 0s;
+}
 
 @media screen and (min-width: 768px) {
   :root {
