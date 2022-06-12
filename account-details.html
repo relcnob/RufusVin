@@ -83,135 +83,52 @@
           </p>
         </section>
       </section>
-      <section class="chat-wrapper">
-        <span class="chat-window-toggle"
-          ><img src="assets/icons/ico-chat-bubble.svg" alt="chat-bubble"
-        /></span>
-        <div class="chat-window-wrapper">
-          <section class="chat-header">
-            <h3>CHAT WITH OUR ASSISTANT</h3>
-            <img src="assets/icons/ico-close-2.svg" />
-          </section>
-          <section class="chat-messages-wrapper">
-            <span class="assistant-message">
-              <h3>Rufus Vin</h3>
-              Hello, this is our automated chat window, please send us a message
-              and we will get back to you as soon as possible!</span
-            >
-          </section>
-          <section class="chat-send-message">
-            <input
-              type="text"
-              name="chat-message"
-              id="chat-message"
-              class="chat-message-box"
-            />
-            <button class="button-2">SEND MESSAGE</button>
-          </section>
-        </div>
-      </section>
-      <main>
-        <section class="account-pop-up">
+      <main class="account-details-page">
+        <section class="edit-pop-up">
           <div>
             <image src="assets/icons/ico-close.svg"></image>
             <h3>MAINTANANCE</h3>
-            <p>We are sorry!</p>
             <p>
               Currently this function is under maintanance until further notice.
-            </p>
-            <a href="index.html" class="button-2"> BACK TO HOMEPAGE</a>
-          </div>
-        </section>
-        <section class="log-in-pop-up">
-          <div>
-            <image src="assets/icons/ico-close.svg"></image>
-            <h3>WRONG PASSWORD OR EMAIL</h3>
-            <p>
-              Account with this password not found in the system. Please check
-              your credentials before logging in.
             </p>
           </div>
         </section>
         <section class="breadcrumbs">
           <a href="index.html">Home</a>
-          <span>Account</span>
+          <a href="account.html">Account</a>
+          <span>Account Details</span>
         </section>
-        <section class="account-page-wrapper">
-          <div class="account-page-text-box">
-            <h1>LOG IN</h1>
-            <form class="account-form">
-              <div class="input-account-email-log-in">
-                <label for="account-name">Email</label>
-                <input
-                  class="input-account-email-log-in"
-                  type="email"
-                  id="account-email-log-in"
-                  name="Email"
-                />
-              </div>
-              <div>
-                <label for="account-password-log-in">Password</label>
-                <input
-                  class="input-account-page"
-                  type="password"
-                  id="account-password-log-in"
-                  name="password"
-                />
-              </div>
-              <div>
-                <a id="account-link-3" class="account-text-link"
-                  >Forgot your passoword?</a
-                >
-              </div>
-            </form>
-            <a id="account-link" class="button-2">LOG IN</a>
-            <a
-              href="contact.html"
-              class="account-text-link account-contact-link"
-              >Having problems logging in?</a
-            >
+        <section class="account-details-page-wrapper">
+          <div class="account-details-page-text-box">
+            <h1>ACCOUNT DETAILS</h1>
+            <div class="account-details-wrapper">
+              <h2>First Name</h2>
+              <p id="details-first-name"></p>
+              <h2>Last Name</h2>
+              <p id="details-last-name"></p>
+              <h2>Email</h2>
+              <p id="details-email"></p>
+              <h2>Phone Number</h2>
+              <p id="details-phone-number"></p>
+            </div>
+            <a id="account-details-edit" class="button-2">EDIT</a>
           </div>
-          <div class="account-page-text-box">
-            <h1>REGISTER</h1>
-            <form class="account-form">
-              <div>
-                <label for="account-first-name">First Name</label>
-                <input
-                  class="input-account-first-name-register"
-                  type="text"
-                  id="account-first-name"
-                  name="First-Name"
-                />
-              </div>
-              <div>
-                <label for="account-last-name">Last Name</label>
-                <input
-                  class="input-account-last-name-register"
-                  type="text"
-                  id="account-last-name-register"
-                  name="Last-Name"
-                />
-              </div>
-              <div>
-                <label for="account-email">Email</label>
-                <input
-                  class="input-account-page"
-                  type="email"
-                  id="account-email"
-                  name="Email"
-                />
-              </div>
-              <div>
-                <label for="account-password-register">Password</label>
-                <input
-                  class="input-account-page"
-                  type="password"
-                  id="account-password-register"
-                  name="password"
-                />
-              </div>
-            </form>
-            <a id="account-link-2" class="button-2">REGISTER</a>
+          <div class="account-details-page-text-box">
+            <h1>SHIPPING DETAILS</h1>
+            <div class="account-details-wrapper">
+              <h2>Company Name</h2>
+              <p id="details-company-name"></p>
+              <h2>Street Name</h2>
+              <p id="details-street-name"></p>
+              <h2>Apartment</h2>
+              <p id="details-apartment"></p>
+              <h2>Country</h2>
+              <p id="details-country"></p>
+              <h2>City</h2>
+              <p id="details-city"></p>
+              <h2>Postal Code</h2>
+              <p id="details-postal-code"></p>
+            </div>
           </div>
         </section>
       </main>
@@ -290,7 +207,7 @@
         <div class="copyright">&copy; 2022 Derail Department</div>
       </footer>
       <script src="scripts/menu.js"></script>
-      <script src="scripts/account.js"></script>
+      <script src="scripts/account-details.js"></script>
     </div>
   </body>
 </html>
