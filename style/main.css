@@ -1087,7 +1087,7 @@ main .breadcrumbs {
 .chat-header {
   display: flex;
   align-items: center;
-  background-color: var(--colorMain);
+  background-color: var(--colorMainDark);
   padding: 0.5rem;
   justify-content: space-between;
   width: 100%;
