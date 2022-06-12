@@ -1042,6 +1042,11 @@ main .breadcrumbs {
 }
 /* chat bubble */
 
+.chat-wrapper {
+  z-index: 110;
+  position: relative;
+}
+
 .chat-window-toggle {
   display: block;
   position: fixed;

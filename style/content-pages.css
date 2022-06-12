@@ -269,7 +269,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50%;
+  min-height: 50vh;
   width: fit-content;
   padding: var(--sectionPadding);
 }
