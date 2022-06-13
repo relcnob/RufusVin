@@ -62,3 +62,30 @@ slideSelector3.addEventListener("click", () => {
   activeSlide = 3;
   updateSlide();
 });
+
+// Newsletter
+
+document
+  .querySelector("#homepage-newsletter")
+  .addEventListener("submit", (event) => {
+    document
+      .querySelector(".newsletter-pop-up")
+      .classList.add("newsletter-pop-up-visible");
+    event.preventDefault();
+  });
+
+document
+  .querySelector(".newsletter-pop-up div img")
+  .addEventListener("click", () => {
+    document
+      .querySelector(".newsletter-pop-up")
+      .classList.remove("newsletter-pop-up-visible");
+  });
+
+document
+  .querySelector("#newsletter-pop-up-button")
+  .addEventListener("click", () => {
+    document
+      .querySelector(".newsletter-pop-up")
+      .classList.remove("newsletter-pop-up-visible");
+  });
