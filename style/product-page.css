@@ -376,7 +376,7 @@
 }
 @media screen and (min-width: 1024px) {
   .product-details {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
